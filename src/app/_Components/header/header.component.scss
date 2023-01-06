@@ -1,0 +1,55 @@
+.menu{
+    display: block;
+    margin:0 50px 116px 50px;
+    ul{
+        justify-content:space-around;
+        display: flex;
+        padding: 0;
+        flex-direction: row;
+        align-items: center;
+        list-style-type: none;
+        li{
+            a{
+                font-family: Roboto;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 22px;
+                letter-spacing: -0.10000000149011612px;
+                text-decoration: none;
+            }
+        }
+    }
+}
+@media (max-width:820px) {
+    .menu{
+        margin:0 0 116px 0;
+    }
+}
+
+
+//////////menu berger/////////////
+@media (max-width:720px) {
+    .burger{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    ul{
+        justify-content:space-around;
+        display: flex;
+        padding: 0;
+        flex-direction: row;
+        align-items: center;
+        list-style-type: none;
+        li{
+            a{
+                font-family: Roboto;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 22px;
+                letter-spacing: -0.10000000149011612px;
+                text-decoration: none;
+            }
+        }
+    }
+}
