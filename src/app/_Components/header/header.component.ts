@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  x!:any;
+
+  myFunction() {
+    let x = document.getElementById("myLinks");
+    if (x!.style.display === "block") {
+        x!.style.display = "none";
+    } else {
+        x!.style.display = "block";
+    }
+  }
+  myFunc(){
+    console.log("function called");
+  }
 }
