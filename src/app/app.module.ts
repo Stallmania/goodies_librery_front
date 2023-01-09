@@ -11,6 +11,7 @@ import { AccueilComponent } from './_Pages/accueil/accueil.component';
 import { MainProductsComponent } from './_Components/main-products/main-products.component';
 import { MainLivreComponent } from './_Components/main-livre/main-livre.component';
 import { LivreComponent } from './_Pages/livre/livre.component';
+import { ButtonComponent } from './_Components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LivreComponent } from './_Pages/livre/livre.component';
     AccueilComponent,
     MainProductsComponent,
     MainLivreComponent,
-    LivreComponent
+    LivreComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

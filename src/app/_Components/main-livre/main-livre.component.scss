@@ -1,12 +1,58 @@
 .mainlivre{
     display: flex;
     justify-content: space-around;
-    margin: 0 100px;
+    margin: 0 200px 100px 200px;
     .left{
-        padding: 20px;
+        position: relative;
+        flex-direction: column;
         background-color: #F9DEC9;
+        border-radius: 5px;
+        .book{
+            position: absolute;
+        }
+        span{
+            padding: 10px 0 0 0;
+            align-self: flex-end ;
+        }
     }
     .right{
-
+        margin-left: 15%;
+        align-items: flex-end;
+        position: relative;
+        .title{
+            margin-bottom: 20px;
+            img{
+                position: absolute;
+                top: 5px;
+            }
+            h2{
+                margin-top: 0;
+                margin-left: 50px;
+            }
+            .auteur{
+                margin-top: 0;
+                padding-left: 50px;
+                color: #969696
+            }
+        }
+        p{
+            color: #545454;
+            padding-bottom: 30px;
+        }
+        .key_words{
+            margin-bottom: 30px;
+            a{
+                text-decoration: none;
+            }
+        }
+        .btn{
+            display: block;
+            text-align: center;
+            app-button:nth-child(2){
+                display: inline-block;
+                position: absolute;
+                bottom:0;
+            }
+        }
     }
 }
