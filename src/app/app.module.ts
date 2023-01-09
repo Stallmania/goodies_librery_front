@@ -9,6 +9,8 @@ import { FooterComponent } from './_Components/footer/footer.component';
 import { ProduitsComponent } from './_Pages/produits/produits.component';
 import { AccueilComponent } from './_Pages/accueil/accueil.component';
 import { MainProductsComponent } from './_Components/main-products/main-products.component';
+import { MainLivreComponent } from './_Components/main-livre/main-livre.component';
+import { LivreComponent } from './_Pages/livre/livre.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MainProductsComponent } from './_Components/main-products/main-products
     FooterComponent,
     ProduitsComponent,
     AccueilComponent,
-    MainProductsComponent
+    MainProductsComponent,
+    MainLivreComponent,
+    LivreComponent
   ],
   imports: [
     BrowserModule,
