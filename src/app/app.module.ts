@@ -12,6 +12,7 @@ import { MainProductsComponent } from './_Components/main-products/main-products
 import { MainLivreComponent } from './_Components/main-livre/main-livre.component';
 import { LivreComponent } from './_Pages/livre/livre.component';
 import { ButtonComponent } from './_Components/button/button.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { ButtonComponent } from './_Components/button/button.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
