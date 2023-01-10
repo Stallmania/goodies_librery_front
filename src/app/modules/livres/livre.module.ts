@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { LivreRoutingModule } from './livre-routing.module';
-import { AllLivreComponent } from './pages/all-livres/all-livre.component';
+import { LivreComponent } from './pages/livre/livre.component';
 
 @NgModule({
-  declarations: [AllLivreComponent],
+  declarations: [LivreComponent],
   imports: [LivreRoutingModule, SharedModule],
 })
 export class LivreModule {}

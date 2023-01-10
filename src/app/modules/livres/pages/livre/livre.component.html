@@ -1,0 +1,38 @@
+<div class="mainlivre">
+  <div class="left">
+    <img class="book" src="{{book.coverPath}}" alt="livre">
+    <span>18 <img src="assets/images/logo/like.svg" alt="like"></span>
+  </div>
+  <div class="right">
+    <div class="title">
+      <img src="assets/images/logo/star.svg" alt="star">
+      <h2>Titre du Livre</h2>
+      <p class="auteur">{{book.author}}</p>
+    </div>
+    <p>Lorem Ipsum is simply du mmy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book.</p>
+    <!-- responsive -->
+    <div class="left-responsive">
+      <img class="book" src="assets/images/livres/livre_page_livre.png" alt="livre">
+      <span>18 <img src="assets/images/logo/like.svg" alt="like"></span>
+    </div>
+    <!-- responsive -->
+    <h3>Mots-clés</h3>
+    <div class="key_words">
+      <a href="">Nom personnage</a> -
+      <a href="">Couleur</a> -
+      <a href="">Paysage</a> -
+      <a href="">Action</a> -
+      <a href="">Romance</a> -
+      <a href="">Illustration</a> -
+      <a href="">Objets</a>
+    </div>
+    <div class="btn">
+      <app-button name="Ajouter au générateur" color="primary" routerLink="/"></app-button>
+      <br>
+      <br>
+      <app-button name="Voir les créations existantes" color="secondary" routerLink="/"></app-button>
+    </div>
+  </div>
+</div>
