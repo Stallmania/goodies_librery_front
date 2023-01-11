@@ -86,8 +86,6 @@
     }
     .right {
       margin: 0 5px;
-      .title {
-      }
       .left-responsive {
         margin: auto;
         display: block;
@@ -97,12 +95,13 @@
         height: 480px;
         max-width: 300px;
         background-color: #f9dec9;
-
         .book {
           position: absolute;
           top: 48%;
           left: 50%;
           transform: translate(-50%, -50%);
+          max-width: 230px;
+          max-height: 376px;
         }
         span {
           position: absolute;
@@ -110,10 +109,6 @@
           left: 80%;
           transform: translate(-50%, -50%);
         }
-      }
-      h3,
-      .key_words,
-      .btn {
       }
     }
   }
