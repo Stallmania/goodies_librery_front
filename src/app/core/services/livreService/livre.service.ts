@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { environment } from 'src/app/environments/environment';
 import { Livre } from '../../_model/livre';
 
@@ -13,8 +14,11 @@ export class LivreService {
     this.urlApi = environment.urlApi;
   }
 
-  getLivre(id:number){
-    return this.http.get<Livre>('http://localhost:8080/book?id='+id)
-      
+  getLivre(id: number) {
+    return this.http.get<Livre>('http://localhost:8080/book?id=' + id);
+  }
+
+  getNewLivre(): Observable<Livre[]> {
+    return this.http.get<Livre[]>('http://localhost:8080/books/news');
   }
 }
