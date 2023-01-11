@@ -1,0 +1,97 @@
+<h1 class="title-top">Créez votre produit dérivé
+  à contre courant en vous inspirant de vos livres alternatifs favoris</h1>
+
+<div class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, deserunt?</div>
+<div class="image-acceuil">
+  <img class="image-nav" src="/assets/images/image/image_acceuil.jpg" alt="">
+</div>
+
+<hr>
+
+<h2 class="title">Créer ton produit</h2>
+<div class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, deserunt?</div>
+
+<div class="steps">
+  <div class="item-steps">
+    <div class="img-steps"><img src="/assets/icones/steps1.png" alt=""></div>
+    <h3 class="title-steps">Lorem, ipsum.</h3>
+    <section class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, illo.</section>
+  </div>
+  <div class="direction"><img src="/assets/icones/icone_direction.png" alt=""></div>
+  <div class="item-steps">
+    <div class="img-steps"><img src="/assets/icones/steps1.png" alt=""></div>
+    <h3 class="title-steps">Lorem, ipsum.</h3>
+    <section class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, illo.</section>
+  </div>
+  <div class="direction"><img src="/assets/icones/icone_direction.png" alt=""></div>
+  <div class="item-steps">
+    <div class="img-steps"><img src="/assets/icones/steps1.png" alt=""></div>
+    <h3 class="title-steps">Lorem, ipsum.</h3>
+    <section class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, illo.</section>
+  </div>
+</div>
+
+<hr>
+
+<h2 class="title">Découvrez nos nouveautés</h2>
+<div>
+  <div class="carousel-container">
+    <div *ngFor="let book of books; let i = index" [style.display]="i === currentBookIndex ? 'flex' : 'none'"
+      class="book-card">
+      <div class="book-card-left">
+        <img [src]="book.image" [alt]="book.title">
+      </div>
+      <div class="book-card-right">
+        <h2>{{ book.title }}</h2>
+        <p>{{ book.description }}</p>
+      </div>
+    </div>
+    <div class="arrow-left" (click)="previousBook()">&lt;</div>
+    <div class="arrow right" (click)="nextBook()">&gt;</div>
+  </div>
+</div>
+
+<hr>
+
+<h2 class="title">Découvrez nos produits</h2>
+<div class="produits">
+  <div class="item-produit">
+    <h4 class="item">mug</h4>
+    <div class="price">15</div>
+    <section class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, illo.</section>
+    <button class="btn">Détails</button>
+    <div class="little-annotation">Lorem ipsum dolor sit amet.</div>
+  </div>
+  <div class="item-produit" id="center">
+    <div class="div-popular">
+      <div class="popular">popular</div>
+    </div>
+    <h4 class="item">poster</h4>
+    <div class="price">15</div>
+    <section class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, illo.</section>
+    <button class="btn">Détails</button>
+    <div class="little-annotation">Lorem ipsum dolor sit amet.</div>
+  </div>
+  <div class="item-produit">
+    <h4 class="item">T-shirt</h4>
+    <div class="price">15</div>
+    <section class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, illo.</section>
+    <button class="btn">Détails</button>
+    <div class="little-annotation">Lorem ipsum dolor sit amet.</div>
+  </div>
+</div>
+
+<hr>
+
+<div class="newsletter">
+  <div class="text-news">
+    <h3 class="title-news">newsletter</h3>
+    <section clas>Lorem ipsum dolor sit amet.</section>
+  </div>
+  <div class="subscription">
+    <input class="email-subcription" type="text">
+    <button class="btn-subcription" type="submit">Subscribe</button>
+  </div>
+</div>
+
+<hr>

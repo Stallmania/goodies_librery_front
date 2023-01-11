@@ -1,21 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './_Components/main/main.component';
-import { AccueilComponent } from './_Pages/accueil/accueil.component';
-import { LivreComponent } from './_Pages/livre/livre.component';
-import { ProduitsComponent } from './_Pages/produits/produits.component';
+import { LayoutComponent } from './layout/layout.component';
+import { PageNotFoundComponent } from './modules/page-not-found/pages/page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: '', component: AccueilComponent,
-  children: [
-    { path: '', component: MainComponent },
-    { path: 'produits', component: ProduitsComponent},
-    { path: 'livre', component: LivreComponent},
-  ]}
+  {
+    path: '',
+    component: LayoutComponent,
+    loadChildren: () =>
+      import('./modules/main.module').then((m) => m.MainModule),
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
