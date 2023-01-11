@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { LivreService } from 'src/app/core/services/livreService/livre.service';
+import { Livre } from 'src/app/core/_model/livre';
 
 @Component({
   selector: 'app-acceuil',
@@ -6,27 +9,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./acceuil.component.scss'],
 })
 export class AcceuilComponent {
-  books = [
-    {
-      image: '/assets/images/livres/livre_page_livre.png',
-      title: 'Titre du livre 1',
-      description: 'Description du livre 1',
-    },
-    {
-      image: '/assets/images/livres/livre_2.png',
-      title: 'Titre du livre 2',
-      description: 'Description du livre 2',
-    },
-    {
-      image: '/assets/images/livres/livre_page_livre.png',
-      title: 'Titre du livre 3',
-      description: 'Description du livre 3',
-    },
-  ];
+  forimg = 'assets/images/livres/';
+
+  books!: Livre[];
   currentBookIndex = 0;
   intervalId: any;
 
+  constructor(private livreService: LivreService, private router: Router) {}
+
   ngOnInit() {
+    this.livreService.getNewLivre().subscribe((data: Livre[]) => {
+      this.books = data;
+    });
+    console.log(this.livreService.getNewLivre().subscribe());
+
     this.intervalId = setInterval(() => {
       this.nextBook();
     }, 5000);
@@ -52,5 +48,9 @@ export class AcceuilComponent {
     } else {
       this.currentBookIndex++;
     }
+  }
+
+  navigate(id: number) {
+    this.router.navigate(['/livres/' + id]);
   }
 }
