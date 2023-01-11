@@ -48,11 +48,11 @@
     <div *ngFor="let book of books; let i = index" [style.display]="i === currentBookIndex ? 'flex' : 'none'"
       class="book-card">
       <div class="book-card-left">
-        <img [src]="book.image" [alt]="book.title">
+        <img (click)="navigate(book.id)" class="book" src={{forimg}}{{book.coverPath}} alt="book.title">
       </div>
       <div class="book-card-right">
         <h2>{{ book.title }}</h2>
-        <p>{{ book.description }}</p>
+        <p>{{ book.summary }}</p>
       </div>
     </div>
     <div class="arrow-left" (click)="previousBook()">&lt;</div>
