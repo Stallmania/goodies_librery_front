@@ -15,10 +15,10 @@ export class LivreService {
   }
 
   getLivre(id: number) {
-    return this.http.get<Livre>('http://localhost:8080/book?id=' + id);
+    return this.http.get<Livre>(this.urlApi+'book?id=' + id);
   }
 
   getNewLivre(): Observable<Livre[]> {
-    return this.http.get<Livre[]>('http://localhost:8080/books/news');
+    return this.http.get<Livre[]>(this.urlApi+'books/news');
   }
 }

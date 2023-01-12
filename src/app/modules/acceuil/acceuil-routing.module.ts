@@ -4,7 +4,6 @@ import { AcceuilComponent } from './pages/acceuil.component';
 
 const routes: Routes = [
   { path: '', component: AcceuilComponent },
-  // { path: ':id', component:  },
 ];
 
 @NgModule({
