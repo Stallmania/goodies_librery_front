@@ -209,6 +209,48 @@ hr{
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  .arrow-left{
+    color: #d64933;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  .arrow-left:nth-child(n){
+    content: '';
+    position: absolute;
+    background-color: #f9dec9;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3rem;
+  }
+  .arrow-left:hover{
+    cursor: pointer;
+    color:#f9dec9;
+    background-color: #d64933;
+    transition: all 0.3s ease-in-out;
+  }
+  .arrow-right{
+    color: #d64933;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  .arrow-right:nth-child(n){
+    content: '';
+    position: absolute;
+    background-color: #f9dec9;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3rem;
+  }
+  .arrow-right:hover{
+    cursor: pointer;
+    color:#f9dec9;
+    background-color: #d64933;
+    transition: all 0.3s ease-in-out;
+  }
 }
 .book-card {
   display: flex;
