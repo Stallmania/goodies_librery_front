@@ -42,21 +42,23 @@
 
 <hr>
 
-<h2 class="title">Découvrez nos nouveautés</h2>
-<div>
-  <div class="carousel-container">
-    <div *ngFor="let book of books; let i = index" [style.display]="i === currentBookIndex ? 'flex' : 'none'"
-      class="book-card">
-      <div class="book-card-left">
-        <img (click)="navigate(book.id)" class="book" src={{forimg}}{{book.coverPath}} alt="book.title">
+<div class="carousel-bloc">
+  <h2 class="title">Découvrez nos nouveautés</h2>
+  <div>
+    <div class="carousel-container">
+      <div *ngFor="let book of books; let i = index" [style.display]="i === currentBookIndex ? 'flex' : 'none'"
+        class="book-card">
+        <div class="book-card-left">
+          <img (click)="navigate(book.id)" class="book" src={{forimg}}{{book.coverPath}} alt="book.title">
+        </div>
+        <div class="book-card-right">
+          <h2>{{ book.title }}</h2>
+          <p>{{ book.summary }}</p>
+        </div>
       </div>
-      <div class="book-card-right">
-        <h2>{{ book.title }}</h2>
-        <p>{{ book.summary }}</p>
-      </div>
+      <div class="arrow-left" (click)="previousBook()">&lt;</div>
+      <div class="arrow-right" (click)="nextBook()">&gt;</div>
     </div>
-    <div class="arrow-left" (click)="previousBook()">&lt;</div>
-    <div class="arrow-right" (click)="nextBook()">&gt;</div>
   </div>
 </div>
 
