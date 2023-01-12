@@ -1,8 +1,5 @@
 <div class="mainlivre">
-  <div class="left">
-    <img class="book" src={{forimg}}{{book.coverPath}} alt="livre">
-    <span>18 <img src="assets/images/logo/like.svg" alt="like"></span>
-  </div>
+  <app-book-liked responsive="left"></app-book-liked>
   <div class="right">
     <div class="title">
       <img src="assets/images/logo/star.svg" alt="star">
@@ -11,10 +8,7 @@
     </div>
     <p>{{book.summary}}</p>
     <!-- responsive -->
-    <div class="left-responsive">
-      <img class="book" src={{forimg}}{{book.coverPath}} alt="livre">
-      <span>18 <img src="assets/images/logo/like.svg" alt="like"></span>
-    </div>
+    <app-book-liked responsive="left-responsive" [ngClass]="{'left-responsive': true}"></app-book-liked>
     <!-- responsive -->
     <h3>Mots-clés</h3>
     <div class="key_words">
