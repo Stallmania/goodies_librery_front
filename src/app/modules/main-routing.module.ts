@@ -17,11 +17,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./livres/livre.module').then((m) => m.LivreModule),
   },
-  {
+/*   {
     path: 'products',
     loadChildren: () =>
       import('./products/products.module').then((m) => m.ProductsModule),
-  },
+  }, */
 ];
 
 @NgModule({
