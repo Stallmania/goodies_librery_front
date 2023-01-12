@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LivreService } from 'src/app/core/services/livreService/livre.service';
 import { Livre } from 'src/app/core/_model/livre';
@@ -10,12 +11,19 @@ import { Livre } from 'src/app/core/_model/livre';
 })
 export class AcceuilComponent {
   forimg = 'assets/images/livres/';
+  emailForm!: FormGroup;
 
   books!: Livre[];
   currentBookIndex = 0;
   intervalId: any;
 
-  constructor(private livreService: LivreService, private router: Router) {}
+  constructor(private livreService: LivreService, private router: Router) {
+    this.emailForm = new FormGroup({
+      email: new FormControl('', {
+        validators: [Validators.required, Validators.email],
+      }),
+    });
+  }
 
   ngOnInit() {
     this.livreService.getNewLivre().subscribe((data: Livre[]) => {
@@ -52,5 +60,13 @@ export class AcceuilComponent {
 
   navigate(id: number) {
     this.router.navigate(['/livres/' + id]);
+  }
+
+  getEmail() {
+    return this.emailForm.controls['email'].value;
+  }
+
+  onSubmit() {
+    console.log(this.emailForm.controls['email'].value);
   }
 }
