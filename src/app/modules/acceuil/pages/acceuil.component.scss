@@ -4,6 +4,7 @@ h1, h2, h3, h4{
 
 .title {
   text-align: center;
+  margin: 3rem;
 }
 
 hr{
@@ -40,7 +41,7 @@ hr{
   justify-content: space-around;
   margin-bottom: 5%;
   .direction {
-    padding-top: 4%;
+    margin: 3rem;
   }
   .item-steps {
     display: flex;
@@ -308,5 +309,14 @@ hr{
   h1{
     margin: 1rem;
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 920px){
+  .steps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
   }
 }
