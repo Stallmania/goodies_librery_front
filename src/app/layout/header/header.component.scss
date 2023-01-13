@@ -1,6 +1,6 @@
 .menu {
   display: block;
-  margin: 0 50px 2% 50px;
+  margin: 0 50px 100px 50px;
   .active {
     visibility: hidden;
   }
@@ -35,7 +35,7 @@
 //////////menu berger/////////////
 @media (max-width: 720px) {
   .topnav {
-    margin: 13px 13px 5px 13px;
+    margin: 13px 13px 30px 13px;
     background-color: rgb(255, 255, 255);
     position: relative;
   }

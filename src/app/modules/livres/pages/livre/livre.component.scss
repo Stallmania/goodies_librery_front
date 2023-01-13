@@ -41,9 +41,10 @@
         margin-top: 0;
         padding-left: 50px;
         color: #969696;
+        margin-bottom: 0;
       }
     }
-    p {
+    .summary {
       color: #545454;
       padding-bottom: 30px;
     }
@@ -86,6 +87,9 @@
     }
     .right {
       margin: 0 5px;
+      .summary{
+        margin-bottom: 16px;
+      }
       .left-responsive {
         margin: auto;
         display: block;

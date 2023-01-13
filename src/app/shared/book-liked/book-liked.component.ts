@@ -22,8 +22,4 @@ export class BookLikedComponent {
   ngOnInit(): void {
     this.livre.getLivre(this.id).subscribe((book) => (this.book = book));
   }
-
-  public name() {
-    console.log('Le livre: ', this.book);
-  }
 }

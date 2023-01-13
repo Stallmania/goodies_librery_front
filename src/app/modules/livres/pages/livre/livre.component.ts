@@ -17,12 +17,8 @@ export class LivreComponent {
   id!: number;
   book!: Livre;
 
-  forimg = "assets/images/livres/"
+
   ngOnInit(): void {
     this.livre.getLivre(this.id).subscribe((book) => (this.book = book));
-  }
-
-  public name() {
-    console.log('Le livre: ', this.book);
   }
 }
