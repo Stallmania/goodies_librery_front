@@ -178,14 +178,19 @@ hr{
   .text-news {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    align-items: flex-start;
+    width: 50%;
+    p{
+      color: #585757;
+      font-size: 0.8rem;
+    }
   }
   .subscription {
     .btn-subcription {
-      width: 129px;
-      height: 28px;
+      width: 5rem;
+      height: 2rem;
+      border: none;
+      color: #f9dec9;
+      font-weight: bolder;
       background: #d64933;
       /* 1 dp */
 
@@ -318,5 +323,22 @@ hr{
     flex-direction: column;
     align-items: center;
     margin: 1em;
+  }
+  .produits{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .item-produit{
+    margin: 2rem;
+    width: 50% !important;;
+  }
+  .newsletter{
+    display: flex;
+    flex-direction: column;
+    .text-news{
+      width: 100%;
+      text-align: center;
+    }
   }
 }
