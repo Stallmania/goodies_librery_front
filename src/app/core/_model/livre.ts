@@ -1,12 +1,10 @@
-export class Livre {
-  constructor(
-    public id: number,
-    public title: string,
-    public author: string,
-    public coverPath: string,
-    public genre: string,
-    public summary: string,
-    public votesAverage: string,
-    public dateAdded: string
-  ) {}
+export class Livre {;
+    id!: number;
+    title!: string;
+    author!: string;
+    coverPath!: string;
+    genre!: string;
+    summary!: string;
+    votesAverage!: string;
+    dateAdded!: string;
 }
